@@ -3,7 +3,7 @@ layout: default
 title: Schedule
 
 canvas: 
-  assignment_url: 'https://canvas.asu.edu/courses/76016/assignments'
+  assignment_url: 'https://canvas.asu.edu/courses/86711/assignments'
 
 labs:
   lab-01:  'Saturday, May 22nd' 
@@ -25,7 +25,7 @@ final:
   exam-date:  'Mon June 20  - Thurs June 24' 
 
 pdf-root-url:
-  "https://github.com/DS4PS/cpp-523-spr-2021"
+  "https://github.com/DS4PS/cpp-523-sum-2021"
 ---
 
 <!--- 
