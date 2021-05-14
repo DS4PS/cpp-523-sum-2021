@@ -6,23 +6,23 @@ canvas:
   assignment_url: 'https://canvas.asu.edu/courses/76016/assignments'
 
 labs:
-  lab-01:  'Saturday, January 16th' 
-  lab-02:  'Saturday, January 23rd'
-  lab-03:  'Saturday, January 30th'
-  lab-04:  'Saturday, February 6th'
-  lab-05:  'Saturday, February 13th'
-  lab-06:  'Saturday, February 20th'
+  lab-01:  'Saturday, May 22nd' 
+  lab-02:  'Saturday, May 29th'
+  lab-03:  'Saturday, June 5th'
+  lab-04:  'Saturday, June 12th'
+  lab-05:  'Saturday, June 12th'
+  lab-06:  'Saturday, June 19th'
   
 assessments:
-  mini-assessment-01:  'Sat Jan 16 - Wed Jan 20'
-  mini-assessment-02:  'Sat Jan 23 - Tues Jan 26'
-  mini-assessment-03:  'Sat Jan 30- Tues Feb 2'
-  mini-assessment-04:  'Sat Feb 6 - Tues Feb 9'
-  mini-assessment-05:  'Sat Feb 13 - Tues Feb 16'
-  mini-assessment-06:  'Sat Feb 20 - Tues Feb 23'
+  mini-assessment-01:  'Sat May 22 - Tues May 25'
+  mini-assessment-02:  'Sat May 29 - Tues June 1'
+  mini-assessment-03:  'Sat June 5 - Tues June 8'
+  mini-assessment-04:  'Sat June 12 - Tues June 15'
+  mini-assessment-05:  'Sat June 12 - Tues June 15'
+  mini-assessment-06:  'Sat June 19 - Tues June 22'
   
 final: 
-  exam-date:  'Mon Feb 22 - Sun Feb 28' 
+  exam-date:  'Mon June 20  - Thurs June 24' 
 
 pdf-root-url:
   "https://github.com/DS4PS/cpp-523-spr-2021"
