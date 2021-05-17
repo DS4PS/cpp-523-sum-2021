@@ -733,7 +733,7 @@ We are interested in how these operations impact (1) **the slope** of our policy
 
 
 
-# Week 5 - Dummy Variables 
+# Week 4 - Dummy Variables 
 
 ## Overview
 
@@ -834,7 +834,7 @@ y = b0 + b1(X) + b2(female) + b3(female•X) + e
 
 
 
-# Week 6 - Specification Bias
+# Week 4 - Specification Bias
 
 ## Overview 
 
