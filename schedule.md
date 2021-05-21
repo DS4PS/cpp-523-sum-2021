@@ -262,6 +262,7 @@ And the first chapter from Lewis-Beck serves as a reference for specific formula
 
 Lewis-Beck, C., & Lewis-Beck, M. (2015). Applied regression: An introduction (Vol. 22). Sage publications. [ [pdf](../pubs/Applied%20Regression%20Lewis-Beck.pdf) ]
 
+You might find the notation handout useful as well: [common statistics notation](../handouts/Common-Statistics-Notation.pdf)
 
 <hr>
 
