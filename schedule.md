@@ -993,11 +993,11 @@ This mini assessment should give you an idea of the types of questions you might
 *Attenuation of the slope (tilts toward zero), but also a decrease in standard errors that offset the shift of the slope toward zero.*
 
 
-![](https://github.com/lecy/regression-simulations/raw/main/GIFS/measurement%20error%20iv.gif) 
+![](https://raw.githubusercontent.com/lecy/regression-simulations/master/GIFS/measurement%20error%20iv.gif) 
 
 <br>
 
-![](https://github.com/lecy/regression-simulations/raw/main/GIFS/measurement%20error%20iv%202.gif) 
+![](https://raw.githubusercontent.com/lecy/regression-simulations/master/GIFS/measurement%20error%20iv%202.gif) 
 
 <br><br>
 <hr>
