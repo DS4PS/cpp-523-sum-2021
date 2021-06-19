@@ -209,7 +209,7 @@ text( c(8,8), c(12,6), c("A","B"),
 
 ![](figures/outliers.png)
 
-*The image may differ slightly because it's based on a random sample of 2,000 points to reduce data density so the visualization is not cluttered.* 
+*The image in your template may differ because it's based on a random sample of 2,000 points to reduce data density so the visualization is not cluttered. Use this image to answer the question.* 
 
 #### Q1. What is the likely impact of the outlier "A" on the regression line?
 
