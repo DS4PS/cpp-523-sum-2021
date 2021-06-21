@@ -13,31 +13,56 @@
 
 <title>Lab-06 Specification</title>
 
+<script src="lab-06-instructions_files/header-attrs-2.8/header-attrs.js"></script>
 <script src="lab-06-instructions_files/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="lab-06-instructions_files/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
 <script src="lab-06-instructions_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="lab-06-instructions_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="lab-06-instructions_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="lab-06-instructions_files/navigation-1.1/tabsets.js"></script>
-<script src="lab-06-instructions_files/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 
-<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
 <style type="text/css" data-origin="pandoc">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -57,7 +82,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {  background-color: #f8f8f8; }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
@@ -110,39 +135,9 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
   }
 })();
 </script>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 <link rel="stylesheet" href="textbook.css" type="text/css" />
 
@@ -153,10 +148,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -173,6 +164,9 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
@@ -185,7 +179,6 @@ summary {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -249,7 +242,7 @@ summary {
 
 
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -260,7 +253,8 @@ summary {
 <div id="TOC">
 <ul>
 <li><a href="#study-overview">Study Overview</a></li>
-<li><a href="#part-i-quadratic-models">Part I: Quadratic Models</a><ul>
+<li><a href="#part-i-quadratic-models">Part I: Quadratic Models</a>
+<ul>
 <li><a href="#do-we-need-75000-a-year-to-be-happy">Do We Need $75,000 a Year to Be Happy?</a></li>
 <li><a href="#questions">Questions</a></li>
 </ul></li>
@@ -274,9 +268,9 @@ summary {
 <p><br></p>
 <div id="study-overview" class="section level2">
 <h2>Study Overview</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>( dplyr )</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">library</span>( pander )</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="kw">library</span>( stargazer )</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>( dplyr )</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>( pander )</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>( stargazer )</span></code></pre></div>
 </div>
 <div id="part-i-quadratic-models" class="section level1">
 <h1>Part I: Quadratic Models</h1>
@@ -294,15 +288,15 @@ summary {
 <p>But in the bigger view of their lives, people’s evaluations were much more tied to their income. The more they made, the more they felt their life was going well. The survey asked respondents to place themselves on a life-satisfaction ladder, with the first rung meaning their lives were not going well and the 10th rung meaning it was as good as it could be. The higher their income, the higher the rung people chose. “Importantly, the same percentage increase in income has the same effect on evaluation for everyone, rich or poor alike, even though the absolute dollar amounts differ,” the authors write. So every 10% rise in annual income moves people up the satisfaction ladder the same amount, whether they’re making $25,000 or $100,000. “High incomes don’t bring you happiness, but they do bring you a life you think is better,” conclude the authors. Might it be time for Oprah to give these guys their own show?</p>
 <p>Past research on money and happiness has also found that it’s not absolute wealth that’s linked with happiness, but relative wealth or status — that is, how much more money you have than your neighbors. It’s no surprise, then, that when the same polls are done in different countries, Americans come out as a bit of a mixed lot: they’re fifth in terms of happiness, 33rd in terms of smiling and 10th in terms of enjoyment. At the same time, they’re the 89th biggest worriers, the 69th saddest and fifth most stressed people out of the 151 nations studied. Even so, perhaps because of the country’s general wealth, they are in the top 10 citizenries where people feel their lives are going well, beaten out by such eternal optimists as the Canadians, New Zealanders and Scandinavians.</p>
 <p>Right. Now that Princeton researchers have untangled that life mystery, maybe someone at MIT can look into the optimal amount of money required to buy us love.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>URL &lt;-<span class="st"> &quot;https://raw.githubusercontent.com/DS4PS/cpp-523-fall-2019/master/labs/data/IncomeHappiness.csv&quot;</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>dat &lt;-<span class="st"> </span><span class="kw">read.csv</span>( URL )</span></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">plot</span>( dat<span class="op">$</span>income, dat<span class="op">$</span>happiness, </span>
-<span id="cb3-2"><a href="#cb3-2"></a>      <span class="dt">xlab=</span><span class="st">&quot;Income (Thousands of Dollars)&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Hapiness Scale&quot;</span>,</span>
-<span id="cb3-3"><a href="#cb3-3"></a>      <span class="dt">main=</span><span class="st">&quot;Does Money Make You Happy?&quot;</span>,</span>
-<span id="cb3-4"><a href="#cb3-4"></a>      <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">col=</span><span class="st">&quot;darkorange&quot;</span>, <span class="dt">bty=</span><span class="st">&quot;n&quot;</span>,</span>
-<span id="cb3-5"><a href="#cb3-5"></a>      <span class="dt">xaxt=</span><span class="st">&quot;n&quot;</span> )</span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="kw">axis</span>( <span class="dt">side=</span><span class="dv">1</span>, <span class="dt">at=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">50000</span>,<span class="dv">100000</span>,<span class="dv">150000</span>,<span class="dv">200000</span>), <span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;$0&quot;</span>,<span class="st">&quot;$50k&quot;</span>,<span class="st">&quot;$100k&quot;</span>,<span class="st">&quot;$150k&quot;</span>,<span class="st">&quot;$200k&quot;</span>) )</span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="kw">lines</span>( <span class="dv">1</span><span class="op">:</span><span class="dv">200000</span>, y_hat, <span class="dt">col=</span><span class="kw">gray</span>(<span class="fl">0.3</span>,<span class="fl">0.5</span>), <span class="dt">lwd=</span><span class="dv">6</span> )</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>URL <span class="ot">&lt;-</span> <span class="st">&quot;https://raw.githubusercontent.com/DS4PS/cpp-523-fall-2019/master/labs/data/IncomeHappiness.csv&quot;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>( URL )</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>( dat<span class="sc">$</span>income, dat<span class="sc">$</span>happiness, </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab=</span><span class="st">&quot;Income (Thousands of Dollars)&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Hapiness Scale&quot;</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">main=</span><span class="st">&quot;Does Money Make You Happy?&quot;</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">pch=</span><span class="dv">19</span>, <span class="at">col=</span><span class="st">&quot;darkorange&quot;</span>, <span class="at">bty=</span><span class="st">&quot;n&quot;</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">xaxt=</span><span class="st">&quot;n&quot;</span> )</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>( <span class="at">side=</span><span class="dv">1</span>, <span class="at">at=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">50000</span>,<span class="dv">100000</span>,<span class="dv">150000</span>,<span class="dv">200000</span>), <span class="at">labels=</span><span class="fu">c</span>(<span class="st">&quot;$0&quot;</span>,<span class="st">&quot;$50k&quot;</span>,<span class="st">&quot;$100k&quot;</span>,<span class="st">&quot;$150k&quot;</span>,<span class="st">&quot;$200k&quot;</span>) )</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>( <span class="dv">1</span><span class="sc">:</span><span class="dv">200000</span>, y_hat, <span class="at">col=</span><span class="fu">gray</span>(<span class="fl">0.3</span>,<span class="fl">0.5</span>), <span class="at">lwd=</span><span class="dv">6</span> )</span></code></pre></div>
 <p><img src="lab-06-instructions_files/figure-html/unnamed-chunk-4-1.png" width="864" /></p>
 </div>
 <div id="questions" class="section level2">
@@ -312,11 +306,11 @@ summary {
 <p><span class="math inline">\(Happiness = b_0+b_1 Income+ b_2 (Income)^2+e\)</span></p>
 <p>Report your results in a regression table.</p>
 <p>Helpful advice - since income becomes quite large the coefficient b2 will become quite small.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>y.happy &lt;-<span class="st"> </span>dat<span class="op">$</span>happiness</span>
-<span id="cb4-2"><a href="#cb4-2"></a>x.income &lt;-<span class="st"> </span>dat<span class="op">$</span>income </span>
-<span id="cb4-3"><a href="#cb4-3"></a>x2.income.sq &lt;-<span class="st"> </span>x.income<span class="op">*</span>x.income</span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="kw">options</span>( <span class="dt">scipen=</span><span class="dv">8</span> )</span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="kw">summary</span>( <span class="kw">lm</span>( y.happy <span class="op">~</span><span class="st"> </span>x.income <span class="op">+</span><span class="st"> </span>x2.income.sq ) )</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>y.happy <span class="ot">&lt;-</span> dat<span class="sc">$</span>happiness</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>x.income <span class="ot">&lt;-</span> dat<span class="sc">$</span>income </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>x2.income.sq <span class="ot">&lt;-</span> x.income<span class="sc">*</span>x.income</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>( <span class="at">scipen=</span><span class="dv">8</span> )</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>( <span class="fu">lm</span>( y.happy <span class="sc">~</span> x.income <span class="sc">+</span> x2.income.sq ) )</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = y.happy ~ x.income + x2.income.sq)
@@ -338,11 +332,11 @@ summary {
 ## F-statistic:  7529 on 2 and 1997 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>It’s fine, the math will still work out. You just need to report a lot of significant digits in your table.</p>
 <p>You can avoid this issue by scaling income by a constant (dividing by 10,000):</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># divide income by 10,000</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>y.happy &lt;-<span class="st"> </span>dat<span class="op">$</span>happiness</span>
-<span id="cb6-3"><a href="#cb6-3"></a>x.income &lt;-<span class="st"> </span>dat<span class="op">$</span>income <span class="op">/</span><span class="st"> </span><span class="dv">10000</span>  </span>
-<span id="cb6-4"><a href="#cb6-4"></a>x2.income.sq &lt;-<span class="st"> </span>x.income<span class="op">*</span>x.income</span>
-<span id="cb6-5"><a href="#cb6-5"></a><span class="kw">summary</span>( <span class="kw">lm</span>( y.happy <span class="op">~</span><span class="st"> </span>x.income <span class="op">+</span><span class="st"> </span>x2.income.sq ) )</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># divide income by 10,000</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>y.happy <span class="ot">&lt;-</span> dat<span class="sc">$</span>happiness</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>x.income <span class="ot">&lt;-</span> dat<span class="sc">$</span>income <span class="sc">/</span> <span class="dv">10000</span>  </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>x2.income.sq <span class="ot">&lt;-</span> x.income<span class="sc">*</span>x.income</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>( <span class="fu">lm</span>( y.happy <span class="sc">~</span> x.income <span class="sc">+</span> x2.income.sq ) )</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = y.happy ~ x.income + x2.income.sq)
@@ -373,18 +367,18 @@ summary {
 </div>
 <div id="q2.-how-much-happiness-do-you-gain-making-an-extra-10k-when-your-initial-income-is-15k" class="section level4">
 <h4>Q2. How much happiness do you gain making an extra $10k when your initial income is $15k?</h4>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># replace with model coefficients </span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>b0 &lt;-<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a>b1 &lt;-<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a>b2 &lt;-<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a></span>
-<span id="cb8-6"><a href="#cb8-6"></a>x &lt;-<span class="st"> </span><span class="dv">15</span>  <span class="co"># use 15000 if you did not rescale above</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a>happy<span class="fl">.15</span>k &lt;-<span class="st"> </span>b0 <span class="op">+</span><span class="st"> </span>b1<span class="op">*</span>x <span class="op">+</span><span class="st"> </span>b2<span class="op">*</span>x<span class="op">*</span>x</span>
-<span id="cb8-8"><a href="#cb8-8"></a></span>
-<span id="cb8-9"><a href="#cb8-9"></a>x &lt;-<span class="st"> </span><span class="dv">25</span>  <span class="co"># use 25000 if you did not rescale above</span></span>
-<span id="cb8-10"><a href="#cb8-10"></a>happy<span class="fl">.25</span>k &lt;-<span class="st"> </span>b0 <span class="op">+</span><span class="st"> </span>b1<span class="op">*</span>x <span class="op">+</span><span class="st"> </span>b2<span class="op">*</span>x<span class="op">*</span>x</span>
-<span id="cb8-11"><a href="#cb8-11"></a></span>
-<span id="cb8-12"><a href="#cb8-12"></a>happy<span class="fl">.25</span>k <span class="op">-</span><span class="st"> </span>happy<span class="fl">.15</span>k  <span class="co"># marginal effect of $10k increase at $15k starting salary</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># replace with model coefficients </span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>b0 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>b1 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>b2 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">15</span>  <span class="co"># use 15000 if you did not rescale above</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>happy<span class="fl">.15</span>k <span class="ot">&lt;-</span> b0 <span class="sc">+</span> b1<span class="sc">*</span>x <span class="sc">+</span> b2<span class="sc">*</span>x<span class="sc">*</span>x</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">25</span>  <span class="co"># use 25000 if you did not rescale above</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>happy<span class="fl">.25</span>k <span class="ot">&lt;-</span> b0 <span class="sc">+</span> b1<span class="sc">*</span>x <span class="sc">+</span> b2<span class="sc">*</span>x<span class="sc">*</span>x</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>happy<span class="fl">.25</span>k <span class="sc">-</span> happy<span class="fl">.15</span>k  <span class="co"># marginal effect of $10k increase at $15k starting salary</span></span></code></pre></div>
 <pre><code>## [1] 410</code></pre>
 </div>
 <div id="q3.-how-much-happiness-do-you-gain-making-an-extra-10k-when-your-initial-income-is-75k" class="section level4">
@@ -398,38 +392,38 @@ summary {
 <div id="part-ii-outliers" class="section level1">
 <h1>Part II: Outliers</h1>
 <p>For this part of the final assignment you will be using a dataset that examines compensation of nonprofit executive directors from the years 2012-2013. The data is extracted from the IRS E-Filer database available on AWS.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>URL &lt;-<span class="st"> &quot;https://github.com/DS4PS/cpp-523-fall-2019/blob/master/labs/data/np-comp-data.rds?raw=true&quot;</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>dat &lt;-<span class="st"> </span><span class="kw">readRDS</span>(<span class="kw">gzcon</span>(<span class="kw">url</span>( URL )))</span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="kw">set.seed</span>( <span class="dv">1234</span> )</span>
-<span id="cb10-4"><a href="#cb10-4"></a>d2 &lt;-<span class="st"> </span><span class="kw">sample_n</span>( dat, <span class="dv">2000</span> )</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>URL <span class="ot">&lt;-</span> <span class="st">&quot;https://github.com/DS4PS/cpp-523-fall-2019/blob/master/labs/data/np-comp-data.rds?raw=true&quot;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="fu">gzcon</span>(<span class="fu">url</span>( URL )))</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>( <span class="dv">1234</span> )</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>d2 <span class="ot">&lt;-</span> <span class="fu">sample_n</span>( dat, <span class="dv">2000</span> )</span></code></pre></div>
 <p>The full codebook is below for reference. We will use these two variables for the model that predicts nonprofit executive salaries based upon the size of the nonprofit.</p>
 <ul>
 <li>REVENUE – Total annual revenue for the nonprofit<br />
 </li>
 <li>SALARY – Annual salary for the Executive Director</li>
 </ul>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">plot</span>( <span class="kw">log</span>(d2<span class="op">$</span>REVENUE), <span class="kw">log</span>(d2<span class="op">$</span>SALARY), <span class="dt">bty=</span><span class="st">&quot;n&quot;</span>, <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">col=</span><span class="st">&quot;darkorange&quot;</span>,</span>
-<span id="cb11-2"><a href="#cb11-2"></a>      <span class="dt">xlab=</span><span class="st">&quot;Nonprofit Revenue (logged)&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Executive Director Salary (logged)&quot;</span>,</span>
-<span id="cb11-3"><a href="#cb11-3"></a>      <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">25</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">16</span>))</span>
-<span id="cb11-4"><a href="#cb11-4"></a><span class="kw">abline</span>( <span class="dt">h=</span><span class="kw">seq</span>( <span class="dv">1</span>, <span class="dv">20</span>, <span class="fl">0.5</span> ), <span class="dt">col=</span><span class="kw">gray</span>(<span class="fl">0.5</span>,<span class="fl">0.2</span>), <span class="dt">lwd=</span><span class="dv">1</span> )</span>
-<span id="cb11-5"><a href="#cb11-5"></a><span class="kw">abline</span>( <span class="dt">v=</span><span class="kw">seq</span>( <span class="dv">1</span>, <span class="dv">25</span>, <span class="fl">0.5</span> ), <span class="dt">col=</span><span class="kw">gray</span>(<span class="fl">0.5</span>,<span class="fl">0.2</span>), <span class="dt">lwd=</span><span class="dv">1</span> )</span>
-<span id="cb11-6"><a href="#cb11-6"></a><span class="kw">abline</span>( <span class="kw">lm</span>( <span class="kw">log</span>(d2<span class="op">$</span>SALARY) <span class="op">~</span><span class="st"> </span><span class="kw">log</span>(d2<span class="op">$</span>REVENUE) ), <span class="dt">col=</span><span class="kw">gray</span>(<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="dt">lwd=</span><span class="dv">3</span> )</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>( <span class="fu">log</span>(d2<span class="sc">$</span>REVENUE), <span class="fu">log</span>(d2<span class="sc">$</span>SALARY), <span class="at">bty=</span><span class="st">&quot;n&quot;</span>, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">col=</span><span class="st">&quot;darkorange&quot;</span>,</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab=</span><span class="st">&quot;Nonprofit Revenue (logged)&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Executive Director Salary (logged)&quot;</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">25</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">16</span>))</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>( <span class="at">h=</span><span class="fu">seq</span>( <span class="dv">1</span>, <span class="dv">20</span>, <span class="fl">0.5</span> ), <span class="at">col=</span><span class="fu">gray</span>(<span class="fl">0.5</span>,<span class="fl">0.2</span>), <span class="at">lwd=</span><span class="dv">1</span> )</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>( <span class="at">v=</span><span class="fu">seq</span>( <span class="dv">1</span>, <span class="dv">25</span>, <span class="fl">0.5</span> ), <span class="at">col=</span><span class="fu">gray</span>(<span class="fl">0.5</span>,<span class="fl">0.2</span>), <span class="at">lwd=</span><span class="dv">1</span> )</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>( <span class="fu">lm</span>( <span class="fu">log</span>(d2<span class="sc">$</span>SALARY) <span class="sc">~</span> <span class="fu">log</span>(d2<span class="sc">$</span>REVENUE) ), <span class="at">col=</span><span class="fu">gray</span>(<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">lwd=</span><span class="dv">3</span> )</span></code></pre></div>
 <p><img src="lab-06-instructions_files/figure-html/unnamed-chunk-9-1.png" width="864" /></p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">plot</span>( <span class="kw">log</span>(d2<span class="op">$</span>REVENUE), <span class="kw">log</span>(d2<span class="op">$</span>SALARY), <span class="dt">bty=</span><span class="st">&quot;n&quot;</span>, <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">col=</span><span class="kw">gray</span>(<span class="fl">0.5</span>,<span class="fl">0.2</span>), <span class="dt">cex=</span><span class="fl">1.2</span>,</span>
-<span id="cb12-2"><a href="#cb12-2"></a>      <span class="dt">xlab=</span><span class="st">&quot;Nonprofit Revenue (logged)&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Executive Director Salary (logged)&quot;</span>,</span>
-<span id="cb12-3"><a href="#cb12-3"></a>      <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">25</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">16</span>))</span>
-<span id="cb12-4"><a href="#cb12-4"></a></span>
-<span id="cb12-5"><a href="#cb12-5"></a><span class="kw">abline</span>( <span class="kw">lm</span>( <span class="kw">log</span>(d2<span class="op">$</span>SALARY) <span class="op">~</span><span class="st"> </span><span class="kw">log</span>(d2<span class="op">$</span>REVENUE) ), <span class="dt">col=</span><span class="st">&quot;darkorange&quot;</span>, <span class="dt">lwd=</span><span class="dv">3</span> )</span>
-<span id="cb12-6"><a href="#cb12-6"></a></span>
-<span id="cb12-7"><a href="#cb12-7"></a><span class="kw">points</span>( <span class="kw">mean</span>(<span class="kw">log</span>(d2<span class="op">$</span>REVENUE)), <span class="kw">mean</span>(<span class="kw">log</span>(d2<span class="op">$</span>SALARY)), <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">col=</span><span class="st">&quot;darkorange&quot;</span>, <span class="dt">cex=</span><span class="dv">2</span> )</span>
-<span id="cb12-8"><a href="#cb12-8"></a><span class="kw">points</span>( <span class="kw">c</span>(<span class="dv">8</span>,<span class="dv">8</span>), <span class="kw">c</span>(<span class="dv">12</span>,<span class="dv">6</span>),</span>
-<span id="cb12-9"><a href="#cb12-9"></a>         <span class="dt">cex=</span><span class="dv">3</span>, <span class="dt">col=</span><span class="st">&quot;steelblue&quot;</span>, <span class="dt">lwd=</span><span class="dv">2</span> )</span>
-<span id="cb12-10"><a href="#cb12-10"></a><span class="kw">points</span>( <span class="kw">c</span>(<span class="dv">8</span>,<span class="dv">8</span>), <span class="kw">c</span>(<span class="dv">12</span>,<span class="dv">6</span>),</span>
-<span id="cb12-11"><a href="#cb12-11"></a>         <span class="dt">cex=</span><span class="fl">1.5</span>, <span class="dt">col=</span><span class="st">&quot;steelblue&quot;</span>, <span class="dt">pch=</span><span class="dv">19</span> )</span>
-<span id="cb12-12"><a href="#cb12-12"></a><span class="kw">text</span>( <span class="kw">c</span>(<span class="dv">8</span>,<span class="dv">8</span>), <span class="kw">c</span>(<span class="dv">12</span>,<span class="dv">6</span>), <span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>), </span>
-<span id="cb12-13"><a href="#cb12-13"></a>      <span class="dt">pos=</span><span class="dv">4</span>, <span class="dt">offset=</span><span class="fl">1.2</span>, <span class="dt">col=</span><span class="st">&quot;steelblue&quot;</span>, <span class="dt">cex=</span><span class="dv">2</span>  )</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>( <span class="fu">log</span>(d2<span class="sc">$</span>REVENUE), <span class="fu">log</span>(d2<span class="sc">$</span>SALARY), <span class="at">bty=</span><span class="st">&quot;n&quot;</span>, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">col=</span><span class="fu">gray</span>(<span class="fl">0.5</span>,<span class="fl">0.2</span>), <span class="at">cex=</span><span class="fl">1.2</span>,</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab=</span><span class="st">&quot;Nonprofit Revenue (logged)&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Executive Director Salary (logged)&quot;</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">25</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">16</span>))</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>( <span class="fu">lm</span>( <span class="fu">log</span>(d2<span class="sc">$</span>SALARY) <span class="sc">~</span> <span class="fu">log</span>(d2<span class="sc">$</span>REVENUE) ), <span class="at">col=</span><span class="st">&quot;darkorange&quot;</span>, <span class="at">lwd=</span><span class="dv">3</span> )</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>( <span class="fu">mean</span>(<span class="fu">log</span>(d2<span class="sc">$</span>REVENUE)), <span class="fu">mean</span>(<span class="fu">log</span>(d2<span class="sc">$</span>SALARY)), <span class="at">pch=</span><span class="dv">19</span>, <span class="at">col=</span><span class="st">&quot;darkorange&quot;</span>, <span class="at">cex=</span><span class="dv">2</span> )</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>( <span class="fu">c</span>(<span class="dv">8</span>,<span class="dv">8</span>), <span class="fu">c</span>(<span class="dv">12</span>,<span class="dv">6</span>),</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">cex=</span><span class="dv">3</span>, <span class="at">col=</span><span class="st">&quot;steelblue&quot;</span>, <span class="at">lwd=</span><span class="dv">2</span> )</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>( <span class="fu">c</span>(<span class="dv">8</span>,<span class="dv">8</span>), <span class="fu">c</span>(<span class="dv">12</span>,<span class="dv">6</span>),</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">cex=</span><span class="fl">1.5</span>, <span class="at">col=</span><span class="st">&quot;steelblue&quot;</span>, <span class="at">pch=</span><span class="dv">19</span> )</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>( <span class="fu">c</span>(<span class="dv">8</span>,<span class="dv">8</span>), <span class="fu">c</span>(<span class="dv">12</span>,<span class="dv">6</span>), <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>), </span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">pos=</span><span class="dv">4</span>, <span class="at">offset=</span><span class="fl">1.2</span>, <span class="at">col=</span><span class="st">&quot;steelblue&quot;</span>, <span class="at">cex=</span><span class="dv">2</span>  )</span></code></pre></div>
 <p><img src="figures/outliers.png" /></p>
-<p><em>The image may differ slightly because it’s based on a random sample of 2,000 points to reduce data density so the visualization is not cluttered.</em></p>
+<p><em>The image in your template may differ because it’s based on a random sample of 2,000 points to reduce data density so the visualization is not cluttered. Use this image to answer the question.</em></p>
 <div id="q1.-what-is-the-likely-impact-of-the-outlier-a-on-the-regression-line" class="section level4">
 <h4>Q1. What is the likely impact of the outlier “A” on the regression line?</h4>
 <ul>
@@ -451,10 +445,10 @@ summary {
 <div id="q4.-what-would-be-the-typical-salary-for-a-director-of-an-averaged-size-nonprofit-log14.44879-in-revenue-a-year" class="section level4">
 <h4>Q4. What would be the typical salary for a director of an averaged-size nonprofit (log(14.44879) in revenue a year)?</h4>
 <p><span class="math inline">\(log(Salary) = 6.367 + 0.343 \cdot log(Revenue)\)</span></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>m &lt;-<span class="st"> </span><span class="kw">lm</span>( <span class="kw">log</span>(SALARY) <span class="op">~</span><span class="st"> </span><span class="kw">log</span>(REVENUE), <span class="dt">data=</span>d2 )</span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="kw">stargazer</span>( m, <span class="dt">type=</span><span class="st">&quot;html&quot;</span>,</span>
-<span id="cb13-3"><a href="#cb13-3"></a>           <span class="dt">omit.stat =</span> <span class="kw">c</span>(<span class="st">&quot;rsq&quot;</span>,<span class="st">&quot;f&quot;</span>,<span class="st">&quot;ser&quot;</span>),</span>
-<span id="cb13-4"><a href="#cb13-4"></a>           <span class="dt">notes.label =</span> <span class="st">&quot;Standard errors in parentheses&quot;</span> )</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lm</span>( <span class="fu">log</span>(SALARY) <span class="sc">~</span> <span class="fu">log</span>(REVENUE), <span class="at">data=</span>d2 )</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span>( m, <span class="at">type=</span><span class="st">&quot;html&quot;</span>,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">omit.stat =</span> <span class="fu">c</span>(<span class="st">&quot;rsq&quot;</span>,<span class="st">&quot;f&quot;</span>,<span class="st">&quot;ser&quot;</span>),</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">notes.label =</span> <span class="st">&quot;Standard errors in parentheses&quot;</span> )</span></code></pre></div>
 <table style="text-align:center">
 <tr>
 <td colspan="2" style="border-bottom: 1px solid black">
@@ -630,7 +624,7 @@ Standard errors in parentheses
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -648,7 +642,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
